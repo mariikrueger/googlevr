@@ -5,7 +5,7 @@ Please read the documentation available at
 <https://developers.google.com/vr/concepts/vrview>.
 
 <br>
-<br>
+<br> 
 
 * [Image Example](http://theta360.guide/googlevr/googlevr.html)
 * [Video Example](http://theta360.guide/googlevr/video-sample.html)
