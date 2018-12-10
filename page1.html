@@ -1,23 +1,39 @@
 
 
-<html>
-<body>
+  
+  <html>
+  <head>
+  
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <link href="//fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet" type="text/css">
+    <link href="examples/style.css" rel="stylesheet" type="text/css">
+    <style>
+      #button{
+        position: absolute;
+        left: 100px;
+        top: 100px;
+      }
 
-<iframe width="100%" height="100%" allowfullscreen
+      iframe{
+        width: 100%;
+        height: 100vh;
+      }
+
+    </style>
+  </head>
+  
+ 
+
+<iframe  height="100%" scrolling="no" allowfullscreen
 frameborder="0" src="index.html?video=img/newmovie3.mov&is_stereo=false"> </iframe>
   
-  hi
+
+    <a href="#" id="button">  <h1>next</h1> </a>
+
 
 
 </body>
 <html>
   
-  <script>
-    var video = document.getElementById('myVideo');
-
-    video.onended = function() {
-      alert("next.")
-      window.location = 'https://mariikrueger.github.io/googlevr/page2.html'
-    };
-    
-</script>
+  
