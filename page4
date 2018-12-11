@@ -1,0 +1,47 @@
+    <style>
+      #button{
+        position: absolute;
+        font-size: 9px;
+        color: #FF85AC;
+        right: 200px;
+        top: 1000px;
+      }
+</style>
+ 
+
+<html>
+<body>
+  <br>
+  <br>
+  <br>
+<center>
+<iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandria1.mov&is_stereo=false"></iframe>
+<iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandira7.mov&is_stereo=false"></iframe>
+
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandria8.mov&is_stereo=false"></iframe>
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandria11.mov&is_stereo=false"></iframe>
+  <br>
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandria4.mov&is_stereo=false"></iframe>
+<iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandria10.mov&is_stereo=false"></iframe>
+
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandria6.mov&is_stereo=false"></iframe>
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/sandria3.mov&is_stereo=false"></iframe>
+  
+  
+
+  
+  </center>
+ 
+    <a href="#" id="button">  <h1><small>watch yuka here</small></h1> </a>
+</body>
+  
+
+<html>
