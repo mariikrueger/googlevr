@@ -1,0 +1,47 @@
+    <style>
+      #button{
+        position: absolute;
+        font-size: 9px;
+        color: #85A6FF;
+        left: 1150px;
+        top: 525px;
+      }
+</style>
+ 
+
+<html>
+<body>
+  <br>
+  <br>
+  <br>
+<center>
+<iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate1.mov&is_stereo=false"></iframe>
+<iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate2.mov&is_stereo=false"></iframe>
+
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate4.mov&is_stereo=false"></iframe>
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate3.mov&is_stereo=false"></iframe>
+  <br>
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate6.mov&is_stereo=false"></iframe>
+<iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate7.mov&is_stereo=false"></iframe>
+
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate5.mov&is_stereo=false"></iframe>
+  <iframe width="300px" height="200px" allowfullscreen
+frameborder="0" src="index.html?video=img/kate8.mov&is_stereo=false"></iframe>
+  
+  
+
+  
+  </center>
+ 
+    <a href="#" id="button">  <h1><small>watch sandria here</small></h1> </a>
+</body>
+  
+
+<html>
