@@ -124,6 +124,38 @@ h1 {
     
     
     
+    #mydiv2 {
+  position: absolute;
+    font-size: 12px;
+  padding: 12px;
+  color: #AB94B8;
+  border: 1px solid #BFA5CC;
+     text-align: center;
+ 
+}
+
+#mydivheader2 {
+
+}
+    
+    
+    a {
+    color: #EFD2FF;
+         font-size: 12px;
+        font-family: Verdana; 
+    text-decoration: none;
+}
+
+a:hover 
+{
+     background: #F4DFFF;
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+
+
+    
 
 
 
@@ -206,23 +238,22 @@ frameborder="0" src="index.html?video=img/kate8.mov&is_stereo=false"></iframe>
   
 
   
-  </center>
- 
-    <a style="text-decoration:none;" href="https://www.youtube.com/watch?v=R0QkeZL2Ink&t=126s" id="buttons">  <h1><small>watch kate here</small></h1> </a>
-
-    
-    </body>
-  
 	
 	
 	
     <div id="logo" 
        
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/fGwZD2K/LOGO.png" alt="LOGO" border="0" width="70"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/P47M9Z2/LOGO.png" alt="LOGO" border="0" width="70"></a>
 
 	</div>
 
 	
+	    
+<!-- Draggable DIV -->
+<div id="mydiv2">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div id="mydivheader2">  <a style="text-decoration:none;" href="http://www.yahoo.com"> watch kate here   </a>
+</div>
 	
     
 <!-- Draggable DIV -->
@@ -306,4 +337,49 @@ function dragElement(elmnt) {
   }
 }
     
+  
+dragElement(document.getElementById("mydiv2"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header2")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header2").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV: 
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+    
     </script>
+
