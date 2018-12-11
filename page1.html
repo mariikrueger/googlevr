@@ -1,4 +1,4 @@
-    <style>
+ <style>
         
         
         
@@ -17,22 +17,22 @@ h1 {
 }
 
 .box {
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
   background: rgba(255,255,255,0.2);
-  padding: 35px;
-  border: 2px solid #fff;
+  padding: 10px;
+  border: 1px solid #fff;
   border-radius: 20px/50px;
   background-clip: padding-box;
   text-align: center;
 }
 
 .button {
-  font-size: 12px;
-  padding: 10px;
-  color: #E4B0FF;
-  border: 1px solid #BFA5CC;
-  border-radius: 20px/50px;
+  font-size: 15px;
+ text-align: center;
+  color: #EFD2FF;
+
+
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -104,8 +104,32 @@ h1 {
   
 
         
+
+
+#mydiv {
+  position: absolute;
+    font-size: 15px;
+  padding: 1px;
+  color: #AB94B8;
+  border: 1px solid #BFA5CC;
+     text-align: center;
+ 
+}
+
+#mydivheader {
+
+}
+    
+    
+    
+    
+    
+
+
+
+
         
-        
+
         
         
         
@@ -194,9 +218,14 @@ frameborder="0" src="index.html?video=img/kate8.mov&is_stereo=false"></iframe>
     <a style="text-decoration:none;" href="https://www.youtube.com/watch?v=R0QkeZL2Ink&t=126s" id="buttons">  <h1><small>watch kate here</small></h1> </a>
 
     
+    </body>
+  
     
-<div class="box">
-	<a class="button" href="#popup1"><i>who is kate?</i></a>
+<!-- Draggable DIV -->
+<div id="mydiv">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div id="mydivheader"><div class="box">
+	<a class="button" href="#popup1">who is kate?    </a>
 </div>
 
 <div id="popup1" class="overlay">
@@ -216,10 +245,11 @@ frameborder="0" src="index.html?video=img/kate8.mov&is_stereo=false"></iframe>
 	</div>
 </div>
     
-    
-    </body>
-  
-    
+</div>
+
+
+
+
     
     
     
@@ -229,5 +259,53 @@ frameborder="0" src="index.html?video=img/kate8.mov&is_stereo=false"></iframe>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/fGwZD2K/LOGO.png" alt="LOGO" border="0" width="70"></a>
 
 
+
+
     
 <html>
+	
+	<script>
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV: 
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+    
+    </script>
